@@ -43,7 +43,180 @@ const question = [
       { text: "Computer Style Sheets", correct: false },
       { text: "Cascading Style Sheets", correct: true },
     ],
+  },
+
+  {
+    question: "Which keyword is used to declare a variable in JavaScript?",
+    answeres: [
+      { text: "var", correct: false },
+      { text: "let", correct: false },
+      { text: "const", correct: false },
+      { text: "All of the above", correct: true },
+    ],
+  },
+  {
+    question: "What is the output of `typeof null` in JavaScript?",
+    answeres: [
+      { text: "null", correct: false },
+      { text: "undefined", correct: false },
+      { text: "object", correct: true },
+      { text: "function", correct: false },
+    ],
+  },
+  {
+    question: "Which method is used to convert JSON data to a JavaScript object?",
+    answeres: [
+      { text: "JSON.parse()", correct: true },
+      { text: "JSON.stringify()", correct: false },
+      { text: "JSON.toObject()", correct: false },
+      { text: "JSON.convert()", correct: false },
+    ],
+  },
+  {
+    question: "What will `2 + '2'` return in JavaScript?",
+    answeres: [
+      { text: "'4'", correct: false },
+      { text: "4", correct: false },
+      { text: "'22'", correct: true },
+      { text: "NaN", correct: false },
+    ],
+  },
+  {
+    question: "Which method is used to add an element at the end of an array?",
+    answeres: [
+      { text: "push()", correct: true },
+      { text: "pop()", correct: false },
+      { text: "shift()", correct: false },
+      { text: "unshift()", correct: false },
+    ],
+  },
+  {
+    question: "What is a closure in JavaScript?",
+    answeres: [
+      { text: "Function with no return value", correct: false },
+      { text: "Nested function with access to outer scope", correct: true },
+      { text: "Function that closes the app", correct: false },
+      { text: "Function used for debugging", correct: false },
+    ],
+  },
+  {
+    question: "Which hook is used to manage state in a React functional component?",
+    answeres: [
+      { text: "useEffect", correct: false },
+      { text: "useReducer", correct: false },
+      { text: "useState", correct: true },
+      { text: "useMemo", correct: false },
+    ],
+  },
+  {
+    question: "What does JSX stand for?",
+    answeres: [
+      { text: "JavaScript XML", correct: true },
+      { text: "Java Syntax Extension", correct: false },
+      { text: "JavaScript Extension", correct: false },
+      { text: "Java Extended Syntax", correct: false },
+    ],
+  },
+  {
+    question: "Which lifecycle method is called after a component is rendered?",
+    answeres: [
+      { text: "componentWillMount", correct: false },
+      { text: "componentDidMount", correct: true },
+      { text: "render", correct: false },
+      { text: "constructor", correct: false },
+    ],
+  },
+  {
+    question: "Which hook replaces componentDidMount in functional components?",
+    answeres: [
+      { text: "useState", correct: false },
+      { text: "useEffect", correct: true },
+      { text: "useContext", correct: false },
+      { text: "useReducer", correct: false },
+    ],
+  },
+  {
+    question: "In React, keys are used to:",
+    answeres: [
+      { text: "Identify which items have changed", correct: true },
+      { text: "Style elements", correct: false },
+      { text: "Bind event handlers", correct: false },
+      { text: "Store state", correct: false },
+    ],
+  },
+  {
+    question: "How do you lift state up in React?",
+    answeres: [
+      { text: "By moving it to the parent component", correct: true },
+      { text: "By using useEffect", correct: false },
+      { text: "By using useReducer", correct: false },
+      { text: "By calling setState from child", correct: false },
+    ],
+  },
+  {
+    question: "Which method is used to update the state in a React class component?",
+    answeres: [
+      { text: "updateState()", correct: false },
+      { text: "this.setState()", correct: true },
+      { text: "changeState()", correct: false },
+      { text: "setState()", correct: false },
+    ],
+  },
+  {
+    question: "What is the default port for React development server?",
+    answeres: [
+      { text: "3000", correct: true },
+      { text: "8080", correct: false },
+      { text: "5000", correct: false },
+      { text: "8000", correct: false },
+    ],
+  },
+  {
+    question: "Which command is used to create a new React app?",
+    answeres: [
+      { text: "npm start react-app", correct: false },
+      { text: "create-react-app", correct: true },
+      { text: "npm create app", correct: false },
+      { text: "npx react-init", correct: false },
+    ],
+  },
+  {
+    question: "Which hook is used for side effects in React?",
+    answeres: [
+      { text: "useState", correct: false },
+      { text: "useEffect", correct: true },
+      { text: "useMemo", correct: false },
+      { text: "useCallback", correct: false },
+    ],
+  },
+  {
+    question: "What is the virtual DOM in React?",
+    answeres: [
+      { text: "A copy of the real DOM", correct: true },
+      { text: "A new web browser", correct: false },
+      { text: "A real DOM replacement", correct: false },
+      { text: "An HTML file", correct: false },
+    ],
+  },
+  {
+    question: "What does `props` stand for in React?",
+    answeres: [
+      { text: "Properties", correct: true },
+      { text: "Prototypes", correct: false },
+      { text: "Proper state", correct: false },
+      { text: "Provisions", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is true about React?",
+    answeres: [
+      { text: "React is a framework", correct: false },
+      { text: "React is a library", correct: true },
+      { text: "React is a database", correct: false },
+      { text: "React is an API", correct: false },
+    ],
   }
+
 ];
 
   
