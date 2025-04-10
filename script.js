@@ -1,50 +1,51 @@
 const question = [
-    {
-      question: "Do you love me?",
-      answeres: [
-        { text: "Yes, because you are intelligent", correct: false },
-        { text: "Yes, because you are so cute", correct: false },
-        { text: "Yes, because you are my everything &  wife", correct: true },
-        { text: "Yes, because you are smart", correct: false },
-      ],
-    },
-    {
-      question: "What makes you fall for me more?",
-      answeres: [
-        { text: "Your smile", correct: true },
-        { text: "Your cooking", correct: false },
-        { text: "Your heart", correct: false },
-        { text: "Your dressing style", correct: false },
-      ],
-    },
-    {
-      question: "How often do you think about me?",
-      answeres: [
-        { text: "Once a day", correct: false },
-        { text: "Every hour", correct: false },
-        { text: "All the time", correct: true },
-        { text: "Only when I'm bored", correct: false },
-      ],
-    },
-    {
-      question: "What’s your favorite thing about us?",
-      answeres: [
-        { text: "The endless laughs", correct: true },
-        { text: "Our matching outfits", correct: false },
-        { text: "The cute selfies", correct: false },
-        { text: "How we understand each other", correct: false },
-      ],
-    },
-    {
-      question: "What do you see in our future?",
-      answeres: [
-        { text: "Lots of travel & memories", correct: true },
-        { text: "Just chilling", correct: false },
-        { text: "Getting rich", correct: false },
-        { text: "A cozy home together", correct: false },
-      ],
-    },
-  ];
+  {
+    question: "What does HTML stand for?",
+    answeres: [
+      { text: "Hyper Trainer Marking Language", correct: false },
+      { text: "Hyper Text Markup Language", correct: true },
+      { text: "Hyper Text Markdown Language", correct: false },
+      { text: "Home Tool Markup Language", correct: false },
+    ],
+  },
+  {
+    question: "Which language is used for styling web pages?",
+    answeres: [
+      { text: "HTML", correct: false },
+      { text: "JQuery", correct: false },
+      { text: "CSS", correct: true },
+      { text: "XML", correct: false },
+    ],
+  },
+  {
+    question: "Which is not a JavaScript framework?",
+    answeres: [
+      { text: "Python Script", correct: true },
+      { text: "JQuery", correct: false },
+      { text: "NodeJS", correct: false },
+      { text: "ReactJS", correct: false },
+    ],
+  },
+  {
+    question: "Which symbol is used for comments in JavaScript?",
+    answeres: [
+      { text: "//", correct: true },
+      { text: "/* */", correct: false },
+      { text: "#", correct: false },
+      { text: "<!-- -->", correct: false },
+    ],
+  },
+  {
+    question: "What does CSS stand for?",
+    answeres: [
+      { text: "Creative Style Sheets", correct: false },
+      { text: "Colorful Style Sheets", correct: false },
+      { text: "Computer Style Sheets", correct: false },
+      { text: "Cascading Style Sheets", correct: true },
+    ],
+  }
+];
+
   
   const questionelement = document.getElementById("question");
   const ansbtns = document.getElementById("ans");
