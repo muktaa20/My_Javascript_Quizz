@@ -1754,7 +1754,6 @@ const questionelement = document.getElementById("question");
 const ansbtns = document.getElementById("ans");
 const nextbtn = document.getElementById("nextbtn");
 
-
 let currentQuestionindex = 0;
 let score = 0;
 
@@ -1813,23 +1812,6 @@ function showScore() {
   nextbtn.innerHTML = "Play Again";
   nextbtn.style.display = "block";
 }
-
-function showScore() {
-  resetstate();
-
-  let message = `You scored ${score} out of ${question.length}.`;
-
-  if (score === 10) {
-    message += " 🎉 Congratulations on 10 correct answers!";
-  } else if (score === 50) {
-    message += " 🏆 Big Congratulations! You got all 50 answers correct!";
-  }
-
-  questionelement.innerHTML = message;
-  nextbtn.innerHTML = "Play Again";
-  nextbtn.style.display = "block";
-}
-
 
 function handleNextButton() {
   currentQuestionindex++;
