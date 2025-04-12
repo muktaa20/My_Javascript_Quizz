@@ -1750,6 +1750,7 @@ const question = [
   },
 ];
 
+
 const questionelement = document.getElementById("question");
 const ansbtns = document.getElementById("ans");
 const nextbtn = document.getElementById("nextbtn");
@@ -1781,6 +1782,8 @@ function showquestion() {
     button.addEventListener("click", selectAnswere);
   });
 }
+
+
 
 function resetstate() {
   nextbtn.style.display = "none";
