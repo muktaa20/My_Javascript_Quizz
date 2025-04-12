@@ -1,118 +1,208 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?ga=GA1.1.1094954375.1742993418&semt=ais_hybrid&w=740");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  animation: fadeInBody 1s ease-in-out forwards;
+}
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
   }
-  
-  body {
-    background-color: rgb(84, 3, 28);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .app {
-    background-color: white;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.app {
+  background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.8s ease-in-out;
+  color: #fff;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  
-  .app h1 {
-    font-size: 25px;
-    color: #001e4d;
-    font-weight: 600;
-    border-bottom: 1px solid grey;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .quiz {
-    padding: 20px 0;
-  }
-  
-  .quiz h2 {
-    font-size: 18px;
-    color: #001e4d;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .btn {
-    background: #fff;
-    color: #222;
-    font-weight: 500;
-    width: 100%;
-    border: 1px solid #222;
-    padding: 12px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .btn:hover:not([disabled]) {
-    background: #222;
+}
+
+.app h1 {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 12px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+.btn:hover:not([disabled]) {
+  background: #fff;
+  color: #222;
+  transform: scale(1.02);
+}
+
+.btn:disabled {
+  cursor: no-drop;
+  opacity: 0.6;
+}
+
+#nextbtn {
+  background: #001e4d;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  max-width: 150px;
+  border: 0;
+  padding: 12px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1.6s ease-in-out;
+}
+
+#nextbtn:hover {
+  background-color: #00306f;
+  transform: scale(1.05);
+}
+
+.correct {
+  background-color: rgb(4, 111, 4);
+  color: white;
+  animation: flashCorrect 0.4s ease-in-out;
+}
+
+@keyframes flashCorrect {
+  0% {
+    background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
-  
-  .btn:disabled {
-    cursor: no-drop;
-  }
-  
-  #nextbtn {
-    background: #001e4d;
-    color: #fff;
-    font-weight: 500;
-    width: 100%;
-    max-width: 150px;
-    border: 0;
-    padding: 12px;
-    margin: 20px auto 0;
-    border-radius: 4px;
-    cursor: pointer;
-    display: none;
-    text-align: center;
-  }
-  
-  .correct {
+  100% {
     background-color: green;
-    color: white;
+    color: #222;
   }
-  
-  .incorect {
-    background-color: red;
-    color: white;
+}
+
+.incorrect {
+  background-color: rgb(231, 28, 28);
+  color: #222;
+  animation: flashIncorrect 0.4s ease-in-out;
+}
+
+@keyframes flashIncorrect {
+  0% {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #222;
   }
-  
-  /* ✅ Responsive adjustments */
-  @media (max-width: 480px) {
-    .app {
-      padding: 20px;
-    }
-  
-    .app h1 {
-      font-size: 20px;
-    }
-  
-    .quiz h2 {
-      font-size: 16px;
-    }
-  
-    .btn {
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    #nextbtn {
-      width: 100%;
-      max-width: none;
-    }
+  100% {
+    background-color: rgb(231, 28, 28);
+    color: #222;
   }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .app h1 {
+    font-size: 22px;
+  }
+
+  .quiz h2 {
+    font-size: 17px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  #nextbtn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .app h1 {
+    font-size: 20px;
+  }
+
+  .quiz h2 {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
   
