@@ -1,20 +1,35 @@
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: url("https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?ga=GA1.1.1094954375.1742993418&semt=ais_hybrid&w=740");
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   animation: fadeInBody 1s ease-in-out forwards;
+  color: #fff;
+}
+
+/* Simple overlay to improve contrast */
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 @keyframes fadeInBody {
@@ -29,16 +44,16 @@ body {
 }
 
 .app {
-  background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+  background-color: rgba(40, 44, 52, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 100%;
   max-width: 600px;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
   animation: slideUp 0.8s ease-in-out;
-  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @keyframes slideUp {
@@ -53,106 +68,133 @@ body {
 }
 
 .app h1 {
-  font-size: 25px;
+  font-size: 26px;
   color: #fff;
   font-weight: 600;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
   animation: fadeIn 1s ease-in-out;
+  text-align: center;
+  border-bottom: 2px solid #4caf50;
 }
 
 .quiz {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .quiz h2 {
   font-size: 18px;
   color: #fff;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 15px;
   animation: fadeIn 1.2s ease-in-out;
 }
 
 .btn {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
   font-weight: 500;
   width: 100%;
-  border: 1px solid #fff;
-  padding: 12px;
-  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  margin: 12px 0;
   text-align: left;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
   animation: fadeIn 1.4s ease-in-out;
 }
 
 .btn:hover:not([disabled]) {
-  background: #fff;
-  color: #222;
-  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn:active:not([disabled]) {
+  transform: translateY(1px);
 }
 
 .btn:disabled {
-  cursor: no-drop;
+  cursor: not-allowed;
   opacity: 0.6;
 }
 
+#progress {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 0.3s;
+}
+
 #nextbtn {
-  background: #001e4d;
+  background: #4caf50;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   width: 100%;
-  max-width: 150px;
+  max-width: 160px;
   border: 0;
-  padding: 12px;
-  margin: 20px auto 0;
-  border-radius: 4px;
+  padding: 14px;
+  margin: 25px auto 0;
+  border-radius: 6px;
   cursor: pointer;
   display: none;
   text-align: center;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   animation: fadeIn 1.6s ease-in-out;
 }
 
 #nextbtn:hover {
-  background-color: #00306f;
-  transform: scale(1.05);
+  background-color: #3e8e41;
+  transform: translateY(-2px);
+}
+
+#nextbtn:active {
+  transform: translateY(1px);
 }
 
 .correct {
-  background-color: rgb(4, 111, 4);
+  background-color: rgba(4, 111, 4, 0.8);
   color: white;
+  border-color: #4caf50;
   animation: flashCorrect 0.4s ease-in-out;
 }
 
 @keyframes flashCorrect {
   0% {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
   }
   100% {
-    background-color: green;
-    color: #222;
+    background-color: rgba(4, 111, 4, 0.8);
+    color: white;
   }
 }
 
 .incorrect {
-  background-color: rgb(231, 28, 28);
-  color: #222;
+  background-color: rgba(231, 28, 28, 0.8);
+  color: white;
+  border-color: #f44336;
   animation: flashIncorrect 0.4s ease-in-out;
 }
 
 @keyframes flashIncorrect {
   0% {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #222;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
   }
   100% {
-    background-color: rgb(231, 28, 28);
-    color: #222;
+    background-color: rgba(231, 28, 28, 0.8);
+    color: white;
   }
 }
 
@@ -171,7 +213,7 @@ body {
 
   .btn {
     font-size: 15px;
-    padding: 10px;
+    padding: 12px;
   }
 
   #nextbtn {
@@ -191,6 +233,7 @@ body {
 
   .btn {
     font-size: 14px;
+    padding: 10px;
   }
 }
 
@@ -204,5 +247,3 @@ body {
     transform: translateY(0);
   }
 }
-
-  
