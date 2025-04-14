@@ -246,7 +246,7 @@ const question = [
   },
   {
     question: "What is setInterval in JavaScript?",
-    answers: [
+    answeres: [
       { text: "setInterval repeatedly executes a function at specified intervals.", correct: true },
       { text: "setInterval executes a function only once after a delay.", correct: false },
       { text: "setInterval is used to stop a running interval.", correct: false },
@@ -255,7 +255,7 @@ const question = [
   },
   {
     question: "What are Promises in JavaScript?",
-    answers: [
+   answeres: [
       { text: "Promises represent the eventual completion or failure of an asynchronous operation.", correct: true },
       { text: "Promises are used only for synchronous code execution.", correct: false },
       { text: "A promise can be in only one state at a time: fulfilled.", correct: false },
@@ -264,7 +264,7 @@ const question = [
   },
   {
     question: "What is a closure in JavaScript?",
-    answers: [
+   answeres: [
       { text: "A closure is a function that has access to its own scope, the outer function's scope, and the global scope.", correct: true },
       { text: "A closure is a function that can only access global variables.", correct: false },
       { text: "Closures are used only in loops to improve performance.", correct: false },
