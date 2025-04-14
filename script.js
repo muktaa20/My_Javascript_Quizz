@@ -1,1755 +1,529 @@
 const question = [
   {
-    question: "What best describes the 'var' keyword in JavaScript?",
+    question: "What is the difference between 'Pass by Value' and 'Pass by Reference' in JavaScript?",
     answeres: [
-      { text: "Block scoped and cannot be reassigned", correct: false },
-      { text: "Function scoped and can be reassigned", correct: true },
-      { text: "Block scoped and can’t be redeclared", correct: false },
-      { text: "Lexically scoped and immutable", correct: false },
-    ],
-  },
-
-  {
-    question: "What best describes the 'const' keyword in JavaScript?",
-    answeres: [
-      { text: "Block scoped and cannot be reassigned", correct: true },
-      { text: "Function scoped and can be redeclared", correct: false },
-      { text: "Accessible before declaration due to hoisting", correct: false },
-      { text: "Block scoped and can be reassigned", correct: false },
-    ],
-  },
-  {
-    question: "What best describes the 'let' keyword in JavaScript?",
-    answeres: [
-      { text: "Block scoped and can be reassigned", correct: true },
-      { text: "Globally scoped and cannot be reassigned", correct: false },
-      { text: "Function scoped and immutable", correct: false },
-      { text: "Block scoped and cannot be reassigned", correct: false },
-    ],
-  },
-  {
-    question: "What is considered a block in JavaScript?",
-    answeres: [
-      { text: "A set of square brackets", correct: false },
-      { text: "A set of opening and closing curly brackets", correct: true },
-      { text: "Parentheses", correct: false },
-      { text: "A line of code ending with a semicolon", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is a primitive data type in JavaScript?",
-    answeres: [
-      { text: "Object", correct: false },
-      { text: "Array", correct: false },
-      { text: "Symbol", correct: true },
-      { text: "RegExp", correct: false },
-    ],
-  },
-  {
-    question: "Which value represents the absence of any object value?",
-    answeres: [
-      { text: "undefined", correct: false },
-      { text: "null", correct: true },
-      { text: "false", correct: false },
-      { text: "0", correct: false },
-    ],
-  },
-  {
-    question:
-      "What is true about a variable that has not been assigned a value?",
-    answeres: [
-      { text: "It is set to null", correct: false },
-      { text: "It is set to 0", correct: false },
-      { text: "It is undefined", correct: true },
-      { text: "It throws an error", correct: false },
-    ],
-  },
-  {
-    question:
-      "Which of the following is a non-primitive data type in JavaScript?",
-    answeres: [
-      { text: "String", correct: false },
-      { text: "Boolean", correct: false },
-      { text: "Object", correct: true },
-      { text: "Symbol", correct: false },
-    ],
-  },
-  {
-    question: "What does the '+' operator do in JavaScript?",
-    answeres: [
-      { text: "Subtraction", correct: false },
-      { text: "Multiplication", correct: false },
-      { text: "Addition", correct: true },
-      { text: "Modulus", correct: false },
-    ],
-  },
-  {
-    question: "Which operator checks both value and type equality?",
-    answeres: [
-      { text: "==", correct: false },
-      { text: "=", correct: false },
-      { text: "===", correct: true },
-      { text: "!=", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is a logical AND operator in JavaScript?",
-    answeres: [
-      { text: "&&", correct: true },
-      { text: "||", correct: false },
-      { text: "!", correct: false },
-      { text: "&", correct: false },
-    ],
-  },
-  {
-    question: "What is the correct syntax for an arrow function in JavaScript?",
-    answeres: [
-      { text: "function => name()", correct: false },
-      { text: "const name = (param) => { }", correct: true },
-      { text: "function name(param) =>", correct: false },
-      { text: "let name() => { }", correct: false },
-    ],
-  },
-  {
-    question: "What does the 'if' statement do in JavaScript?",
-    answeres: [
       {
-        text: "Specifies code that runs when a condition is false",
-        correct: false,
+        text: "Pass by value copies the actual value; pass by reference copies the memory address.",
+        correct: true
       },
-      { text: "Specifies code that runs unconditionally", correct: false },
       {
-        text: "Specifies code that runs when a condition is true",
-        correct: true,
+        text: "Pass by reference duplicates the data to prevent side effects.",
+        correct: false
       },
-      { text: "Specifies multiple cases to run", correct: false },
-    ],
-  },
-  {
-    question: "Which statement runs code if the 'if' condition is false?",
-    answeres: [
-      { text: "if", correct: false },
-      { text: "switch", correct: false },
-      { text: "else", correct: true },
-      { text: "continue", correct: false },
-    ],
-  },
-  {
-    question: "Which statement is used to check multiple conditions?",
-    answeres: [
-      { text: "if only", correct: false },
-      { text: "else only", correct: false },
-      { text: "if...else if...else", correct: true },
-      { text: "switch only", correct: false },
-    ],
-  },
-  {
-    question: "What is the purpose of the 'switch' statement in JavaScript?",
-    answeres: [
-      { text: "To handle multiple conditional branches", correct: true },
-      { text: "To loop over arrays", correct: false },
-      { text: "To declare variables", correct: false },
-      { text: "To compare booleans only", correct: false },
-    ],
-  },
-  {
-    question: "What keyword is used to exit a case in a switch statement?",
-    answeres: [
-      { text: "exit", correct: false },
-      { text: "stop", correct: false },
-      { text: "break", correct: true },
-      { text: "end", correct: false },
-    ],
-  },
-  {
-    question: "What is the default case in a switch statement used for?",
-    answeres: [
-      { text: "It runs if none of the cases match", correct: true },
-      { text: "It always runs first", correct: false },
-      { text: "It must appear before all cases", correct: false },
-      { text: "It breaks the loop", correct: false },
-    ],
-  },
-  {
-    question: "What is the ternary operator used for?",
-    answeres: [
-      { text: "To write a compact if-else", correct: true },
-      { text: "To declare variables", correct: false },
-      { text: "To perform loops", correct: false },
-      { text: "To compare strings", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is the correct ternary syntax?",
-    answeres: [
-      { text: "condition ? exprIfTrue : exprIfFalse", correct: true },
-      { text: "if (condition) ? expr1 : expr2", correct: false },
-      { text: "condition ? ifTrue() elseFalse()", correct: false },
-      { text: "condition : true ? false", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is NOT a falsy value in JavaScript?",
-    answeres: [
-      { text: "0", correct: false },
-      { text: "false", correct: false },
-      { text: "[]", correct: true },
-      { text: "null", correct: false },
-    ],
-  },
-  {
-    question: "Which of the following is a truthy value?",
-    answeres: [
-      { text: "false", correct: false },
-      { text: "0", correct: false },
-      { text: "undefined", correct: false },
-      { text: "'hello'", correct: true },
-    ],
-  },
-
-  {
-    question: "How do you declare a string in JavaScript?",
-    answeres: [
-      { text: "let variableName = 'Hello world'", correct: true },
-      { text: "let variableName = Hello world", correct: false },
-      { text: "let variableName = Hello_world", correct: false },
-      { text: "string variableName = 'Hello world'", correct: false },
-    ],
-  },
-  {
-    question: "What does the escape sequence \\n represent in a string?",
-    answeres: [
-      { text: "A tab space", correct: false },
-      { text: "A backslash", correct: false },
-      { text: "A new line", correct: true },
-      { text: "A form feed", correct: false },
-    ],
-  },
-  {
-    question:
-      "Which escape character is used for a single quote inside a string?",
-    answeres: [
-      { text: "\\'", correct: true },
-      { text: "\\q", correct: false },
-      { text: '\\"', correct: false },
-      { text: "\\$", correct: false },
-    ],
-  },
-  {
-    question: "What does the escape character \\t stand for?",
-    answeres: [
-      { text: "New line", correct: false },
-      { text: "Backslash", correct: false },
-      { text: "Horizontal tab", correct: true },
-      { text: "Carriage return", correct: false },
-    ],
-  },
-  {
-    question: "What is the purpose of the escape character \\\\ in a string?",
-    answeres: [
-      { text: "To create a newline", correct: false },
-      { text: "To include a double quote", correct: false },
-      { text: "To include a backslash", correct: true },
-      { text: "To break the string", correct: false },
-    ],
-  },
-  {
-    question: "Which escape sequence represents a double quote?",
-    answeres: [
-      { text: '\\"', correct: true },
-      { text: "\\'", correct: false },
-      { text: "\\\\", correct: false },
-      { text: "\\b", correct: false },
-    ],
-  },
-  {
-    question: "What does the escape sequence \\b represent in a string?",
-    answeres: [
-      { text: "Backslash", correct: false },
-      { text: "Backspace", correct: true },
-      { text: "Break", correct: false },
-      { text: "Boolean", correct: false },
-    ],
-  },
-  {
-    question: "Which escape character is used to insert a carriage return?",
-    answeres: [
-      { text: "\\r", correct: true },
-      { text: "\\f", correct: false },
-      { text: "\\n", correct: false },
-      { text: "\\v", correct: false },
-    ],
-  },
-  {
-    question: "What does the escape sequence \\f do in JavaScript strings?",
-    answeres: [
-      { text: "Adds a form feed", correct: true },
-      { text: "Adds a newline", correct: false },
-      { text: "Adds a horizontal tab", correct: false },
-      { text: "Adds a backslash", correct: false },
-    ],
-  },
-  {
-    question: "What does \\v stand for in JavaScript string escape characters?",
-    answeres: [
-      { text: "Vertical tab", correct: true },
-      { text: "Void", correct: false },
-      { text: "Version", correct: false },
-      { text: "Variable", correct: false },
-    ],
-  },
-
-  {
-    question: "Which method returns the number of characters in a string?",
-    answeres: [
-      { text: "string.size", correct: false },
-      { text: "string.length", correct: true },
-      { text: "string.count()", correct: false },
-      { text: "string.len()", correct: false },
-    ],
-  },
-  {
-    question: "What does 'string[index]' return in JavaScript?",
-    answeres: [
-      { text: "An array of characters", correct: false },
-      { text: "The entire string", correct: false },
-      { text: "A single character at that index", correct: true },
-      { text: "An object of the string", correct: false },
-    ],
-  },
-  {
-    question: "What does 'string.split(\" \")' do?",
-    answeres: [
-      { text: "Splits the string into an array of characters", correct: false },
-      { text: "Removes all spaces", correct: false },
-      { text: "Splits the string into an array of words", correct: true },
-      { text: "Converts string to lower case", correct: false },
-    ],
-  },
-  {
-    question: "What is the output of 'string.toLowerCase()'?",
-    answeres: [
-      { text: "String converted to uppercase", correct: false },
-      { text: "Original string remains unchanged", correct: false },
-      { text: "String converted to lowercase", correct: true },
-      { text: "Length of the string", correct: false },
-    ],
-  },
-  {
-    question: "Which method returns a single character from a specific index?",
-    answeres: [
-      { text: "string.charAt(index)", correct: true },
-      { text: "string.char(index)", correct: false },
-      { text: "string.get(index)", correct: false },
-      { text: "string.at(index)", correct: false },
-    ],
-  },
-  {
-    question: "What does 'string.replace(old, new)' do?",
-    answeres: [
-      { text: "Adds a substring to the end", correct: false },
-      { text: "Replaces a substring with a new one", correct: true },
-      { text: "Deletes the substring", correct: false },
-      { text: "Changes case of the string", correct: false },
-    ],
-  },
-  {
-    question: "Which method checks if a string contains another substring?",
-    answeres: [
-      { text: "string.contains()", correct: false },
-      { text: "string.has()", correct: false },
-      { text: "string.includes()", correct: true },
-      { text: "string.index()", correct: false },
-    ],
-  },
-  {
-    question: "What does 'string.substr(start, length)' return?",
-    answeres: [
-      { text: "String from start to end of line", correct: false },
-      { text: "Portion of string starting at a given index", correct: true },
-      { text: "Index number", correct: false },
-      { text: "Nothing, it modifies original string", correct: false },
-    ],
-  },
-  {
-    question: "What will 'string.split(\"\")' return?",
-    answeres: [
-      { text: "An array of individual characters", correct: true },
-      { text: "A string with all spaces removed", correct: false },
-      { text: "An error", correct: false },
-      { text: "A reversed string", correct: false },
-    ],
-  },
-  {
-    question:
-      "Which method gives the index of the first occurrence of a value?",
-    answeres: [
-      { text: "string.lastIndexOf()", correct: false },
-      { text: "string.search()", correct: false },
-      { text: "string.indexOf()", correct: true },
-      { text: "string.findIndex()", correct: false },
-    ],
-  },
-  {
-    question: "What does 'string.lastIndexOf(value)' do?",
-    answeres: [
-      { text: "Returns the index of first match", correct: false },
-      { text: "Returns index of last match from end", correct: true },
-      { text: "Removes value from end", correct: false },
-      { text: "Adds value to start", correct: false },
-    ],
-  },
-  {
-    question:
-      "Which method returns a portion of a string without modifying the original?",
-    answeres: [
-      { text: "string.substr()", correct: false },
-      { text: "string.slice()", correct: true },
-      { text: "string.splice()", correct: false },
-      { text: "string.part()", correct: false },
-    ],
-  },
-  {
-    question: "What does 'string.toUpperCase()' do?",
-    answeres: [
-      { text: "Returns the string unchanged", correct: false },
-      { text: "Returns a lowercase version of the string", correct: false },
-      { text: "Returns an uppercase version of the string", correct: true },
-      { text: "Returns the number of uppercase letters", correct: false },
-    ],
-  },
-
-  {
-    question: "Which method adds an element to the end of an array?",
-    answeres: [
-      { text: "shift()", correct: false },
-      { text: "unshift()", correct: false },
-      { text: "push()", correct: true },
-      { text: "pop()", correct: false },
-    ],
-  },
-  {
-    question: "Which method removes the last element from an array?",
-    answeres: [
-      { text: "pop()", correct: true },
-      { text: "shift()", correct: false },
-      { text: "splice()", correct: false },
-      { text: "unshift()", correct: false },
-    ],
-  },
-  {
-    question: "What does 'array[index]' return?",
-    answeres: [
-      { text: "The index of the array", correct: false },
-      { text: "A specific value from the array", correct: true },
-      { text: "The last element of the array", correct: false },
-      { text: "Length of the array", correct: false },
-    ],
-  },
-  {
-    question: "Which method adds an element to the beginning of an array?",
-    answeres: [
-      { text: "push()", correct: false },
-      { text: "unshift()", correct: true },
-      { text: "splice()", correct: false },
-      { text: "pop()", correct: false },
-    ],
-  },
-  {
-    question: "Which method removes the first element from an array?",
-    answeres: [
-      { text: "shift()", correct: true },
-      { text: "pop()", correct: false },
-      { text: "push()", correct: false },
-      { text: "slice()", correct: false },
-    ],
-  },
-  {
-    question: "What does the splice(fromIndex, count) method do?",
-    answeres: [
-      { text: "Adds elements to an array", correct: false },
       {
-        text: "Removes elements from an array starting at a given index",
-        correct: true,
+        text: "Pass by value only applies to objects, not primitives.",
+        correct: false
       },
-      { text: "Returns a sliced array", correct: false },
-      { text: "Sorts the array", correct: false },
-    ],
-  },
-  {
-    question: "Which method creates a shallow copy of part of an array?",
-    answeres: [
-      { text: "slice()", correct: true },
-      { text: "splice()", correct: false },
-      { text: "concat()", correct: false },
-      { text: "copy()", correct: false },
-    ],
-  },
-  {
-    question: "Which method joins multiple arrays into one?",
-    answeres: [
-      { text: "join()", correct: false },
-      { text: "concat()", correct: true },
-      { text: "merge()", correct: false },
-      { text: "combine()", correct: false },
-    ],
-  },
-  {
-    question: "Which method returns the number of elements in an array?",
-    answeres: [
-      { text: "array.count", correct: false },
-      { text: "array.length", correct: true },
-      { text: "array.size()", correct: false },
-      { text: "array.total", correct: false },
-    ],
+      {
+        text: "Both pass by value and reference behave the same in JavaScript.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does 'array.reverse()' do?",
+    question: "What is the difference between map() and filter() in JavaScript?",
     answeres: [
-      { text: "Sorts the array alphabetically", correct: false },
-      { text: "Returns a reversed copy", correct: false },
       {
-        text: "Reverses the order of elements in the original array",
-        correct: true,
+        text: "map() transforms each element and returns a new array; filter() returns elements that meet a condition.",
+        correct: true
       },
-      { text: "Flips the array vertically", correct: false },
-    ],
-  },
-  {
-    question: "Which method returns a string of array values?",
-    answeres: [
-      { text: "join()", correct: true },
-      { text: "concat()", correct: false },
-      { text: "split()", correct: false },
-      { text: "slice()", correct: false },
-    ],
-  },
-  {
-    question: "What does the 'includes()' method check in an array?",
-    answeres: [
-      { text: "If the array is empty", correct: false },
-      { text: "If a certain value exists in the array", correct: true },
-      { text: "If the array has duplicates", correct: false },
-      { text: "If the array has more than one type", correct: false },
-    ],
-  },
-  {
-    question: "Which method sorts an array alphabetically by default?",
-    answeres: [
-      { text: "sort()", correct: true },
-      { text: "order()", correct: false },
-      { text: "reverse()", correct: false },
-      { text: "arrange()", correct: false },
-    ],
-  },
-  {
-    question: "Which method returns the first index of a specified value?",
-    answeres: [
-      { text: "indexOf()", correct: true },
-      { text: "lastIndexOf()", correct: false },
-      { text: "findIndex()", correct: false },
-      { text: "getIndex()", correct: false },
-    ],
-  },
-  {
-    question: "What does 'lastIndexOf()' return in arrays?",
-    answeres: [
-      { text: "The index of the first occurrence", correct: false },
-      { text: "The value of the last element", correct: false },
-      { text: "The last index of a given value", correct: true },
-      { text: "The length of the array", correct: false },
-    ],
-  },
-  {
-    question: "What does 'toString()' do for arrays?",
-    answeres: [
-      { text: "Adds a new element to the end", correct: false },
-      { text: "Converts the array to a string", correct: true },
-      { text: "Returns array length", correct: false },
-      { text: "Deletes all elements", correct: false },
-    ],
-  },
-
-  {
-    question: "What is the correct syntax for a 'for' loop in JavaScript?",
-    answeres: [
-      { text: "for (initialization; condition; increment)", correct: true },
-      { text: "for (condition; increment; initialization)", correct: false },
-      { text: "for (increment; condition; initialization)", correct: false },
-      { text: "for (initialization; increment; condition)", correct: false },
-    ],
-  },
-  {
-    question:
-      "Which loop checks the condition *before* executing the code block?",
-    answeres: [
-      { text: "do...while loop", correct: false },
-      { text: "while loop", correct: true },
-      { text: "for...in loop", correct: false },
-      { text: "for...of loop", correct: false },
-    ],
-  },
-  {
-    question:
-      "Which loop executes the code block at least once before checking the condition?",
-    answeres: [
-      { text: "for loop", correct: false },
-      { text: "while loop", correct: false },
-      { text: "do...while loop", correct: true },
-      { text: "for...of loop", correct: false },
-    ],
-  },
-  {
-    question: "Which loop is best for iterating over object properties?",
-    answeres: [
-      { text: "for...of", correct: false },
-      { text: "for...in", correct: true },
-      { text: "for loop", correct: false },
-      { text: "while loop", correct: false },
-    ],
-  },
-  {
-    question:
-      "Which loop is used to iterate over iterable objects like arrays or strings?",
-    answeres: [
-      { text: "for...in", correct: false },
-      { text: "while", correct: false },
-      { text: "for...of", correct: true },
-      { text: "do...while", correct: false },
-    ],
+      {
+        text: "filter() modifies the original array; map() does not.",
+        correct: false
+      },
+      {
+        text: "map() only works with numbers; filter() only works with strings.",
+        correct: false
+      },
+      {
+        text: "Both map() and filter() return the same output for any array.",
+        correct: false
+      }
+    ]
   },
   {
-    question:
-      "In a for loop, what does the first statement (st1) typically do?",
+    question: "What is the main difference between map() and forEach() in JavaScript?",
     answeres: [
-      { text: "Defines the stopping condition", correct: false },
-      { text: "Updates the loop variable", correct: false },
-      { text: "Initializes the loop variable", correct: true },
-      { text: "Breaks the loop", correct: false },
-    ],
+      {
+        text: "map() returns a new array; forEach() does not return anything.",
+        correct: true
+      },
+      {
+        text: "forEach() returns a new array of the same length; map() does not.",
+        correct: false
+      },
+      {
+        text: "map() modifies the original array; forEach() does not.",
+        correct: false
+      },
+      {
+        text: "forEach() is used only for numbers; map() is used for strings.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "In a for loop, what does the second statement (st2) represent?",
+    question: "Which statement correctly describes the difference between call(), apply(), and bind() in JavaScript?",
     answeres: [
-      { text: "A console log", correct: false },
-      { text: "The condition to run the loop", correct: true },
-      { text: "The increment step", correct: false },
-      { text: "The loop counter", correct: false },
-    ],
+      {
+        text: "call() and apply() invoke the function immediately, while bind() returns a new function.",
+        correct: true
+      },
+      {
+        text: "bind() and apply() call the function immediately, while call() returns a new function.",
+        correct: false
+      },
+      {
+        text: "call() and bind() are identical and interchangeable.",
+        correct: false
+      },
+      {
+        text: "apply() and bind() are used for asynchronous calls only.",
+        correct: false
+      }
+    ]
   },
   {
-    question:
-      "In a for loop, what does the third statement (st3) typically do?",
+    question: "List out some key features of ES6?",
     answeres: [
-      { text: "Increments or decrements the loop variable", correct: true },
-      { text: "Breaks the loop", correct: false },
-      { text: "Checks the condition", correct: false },
-      { text: "Declares the variable", correct: false },
-    ],
+      { text: "Let/Const, Arrow Functions, Classes, Promises", correct: true },
+      { text: "Hoisting, Callbacks, Prototypes", correct: false },
+      { text: "CSS modules and Sass support", correct: false },
+      { text: "jQuery integration", correct: false }
+    ]
   },
-
   {
-    question:
-      "Which array method executes a provided function once for each array element?",
+    question: "What’s the spread operator in JavaScript?",
     answeres: [
-      { text: "map()", correct: false },
-      { text: "forEach()", correct: true },
-      { text: "filter()", correct: false },
-      { text: "reduce()", correct: false },
-    ],
+      { text: "It expands an array or object into individual elements", correct: true },
+      { text: "It merges two objects", correct: false },
+      { text: "It slices arrays", correct: false },
+      { text: "It's used only in loops", correct: false }
+    ]
   },
   {
-    question:
-      "Which method returns a new array based on the results of calling a function on every element?",
+    question: "What is rest operator in JavaScript?",
     answeres: [
-      { text: "forEach()", correct: false },
-      { text: "filter()", correct: false },
-      { text: "map()", correct: true },
-      { text: "some()", correct: false },
-    ],
+      { text: "It combines multiple elements into a single array or object", correct: true },
+      { text: "It removes extra parameters", correct: false },
+      { text: "It pauses execution", correct: false },
+      { text: "It’s used for copying", correct: false }
+    ]
   },
   {
-    question:
-      "Which method returns a new array with elements that pass a provided test?",
+    question: "What is temporal dead zone?",
     answeres: [
-      { text: "map()", correct: false },
-      { text: "filter()", correct: true },
-      { text: "reduce()", correct: false },
-      { text: "forEach()", correct: false },
-    ],
+      { text: "The time between declaring a variable with let/const and its initialization", correct: true },
+      { text: "A bug in the time library", correct: false },
+      { text: "The time taken for setTimeout to trigger", correct: false },
+      { text: "A runtime exception in a loop", correct: false }
+    ]
   },
   {
-    question:
-      "Which method returns the index of the first element that satisfies the testing function?",
+    question: "What is a polyfill in JavaScript?",
     answeres: [
-      { text: "findIndex()", correct: true },
-      { text: "filter()", correct: false },
-      { text: "map()", correct: false },
-      { text: "some()", correct: false },
-    ],
+      { text: "Code that implements a feature on older browsers that do not support it", correct: true },
+      { text: "A CSS-only patch for layout issues", correct: false },
+      { text: "A tool to compress code", correct: false },
+      { text: "An HTML element", correct: false }
+    ]
   },
   {
-    question:
-      "Which method tests whether at least one element passes a provided test?",
+    question: "What is prototype in JavaScript?",
     answeres: [
-      { text: "every()", correct: false },
-      { text: "some()", correct: true },
-      { text: "forEach()", correct: false },
-      { text: "reduce()", correct: false },
-    ],
+      { text: "An object from which other objects inherit properties", correct: true },
+      { text: "A function keyword", correct: false },
+      { text: "A reserved class name", correct: false },
+      { text: "A CSS style", correct: false }
+    ]
   },
   {
-    question:
-      "Which method tests whether all elements pass a provided function?",
+    question: "What is an IIFE (Immediately Invoked Function Expression) in JavaScript?",
     answeres: [
-      { text: "some()", correct: false },
-      { text: "every()", correct: true },
-      { text: "filter()", correct: false },
-      { text: "map()", correct: false },
-    ],
+      {
+        text: "A function that runs immediately after it is defined",
+        correct: true
+      },
+      {
+        text: "A function that only runs after a delay",
+        correct: false
+      },
+      {
+        text: "A method to create a global function",
+        correct: false
+      },
+      {
+        text: "A built-in JavaScript method to handle async operations",
+        correct: false
+      }
+    ]
   },
   {
-    question:
-      "Which method reduces array values into a single value from left to right?",
+    question: "What are the different datatypes in JavaScript?",
     answeres: [
-      { text: "reduceRight()", correct: false },
-      { text: "filter()", correct: false },
-      { text: "reduce()", correct: true },
-      { text: "map()", correct: false },
-    ],
+      { text: "String, Number, Boolean, Null, Undefined, Symbol, BigInt, Object", correct: true },
+      { text: "HTML, CSS, JS, JSON", correct: false },
+      { text: "Variables, Functions, Loops", correct: false },
+      { text: "Primitive, Non-Primitive, Reference", correct: false }
+    ]
   },
   {
-    question:
-      "Which method reduces array values into a single value from right to left?",
+    question: "What is the difference between authentication and authorization?",
     answeres: [
-      { text: "reduce()", correct: false },
-      { text: "reduceRight()", correct: true },
-      { text: "map()", correct: false },
-      { text: "forEach()", correct: false },
-    ],
+      { text: "Authentication verifies who the user is; Authorization determines what they can access.", correct: true },
+      { text: "Authentication checks permissions; Authorization checks identity.", correct: false },
+      { text: "Authentication and Authorization are the same.", correct: false },
+      { text: "Authorization happens before authentication.", correct: false }
+    ]
   },
   {
-    question: "In JavaScript, which data types are copied by reference?",
+    question: "What is the key difference between null and undefined in JavaScript?",
     answeres: [
-      { text: "Number and String", correct: false },
-      { text: "Boolean and Null", correct: false },
-      { text: "Object and Array", correct: true },
-      { text: "Undefined and Symbol", correct: false },
-    ],
+      { text: "null means a variable has no value; undefined means a variable was declared but not assigned", correct: true },
+      { text: "They are exactly the same and can be used interchangeably", correct: false },
+      { text: "undefined is used for objects only", correct: false },
+      { text: "null is the default value for uninitialized variables", correct: false }
+    ]
   },
   {
-    question: "What happens when you assign an object to another variable?",
+    question: "What is the output of 3 + 2 + '7'?",
     answeres: [
-      { text: "It creates a deep copy", correct: false },
-      {
-        text: "It copies all primitive values inside the object",
-        correct: false,
-      },
-      { text: "Both variables reference the same object", correct: true },
-      { text: "It converts the object to a string", correct: false },
-    ],
+      { text: "5 + '7' => '57'", correct: true },
+      { text: "5 + 7 => 12", correct: false },
+      { text: "3 + 2 + '7' => '327'", correct: false },
+      { text: "Invalid operation", correct: false }
+    ]
   },
   {
-    question: "Which statement is true about primitive values in JavaScript?",
+    question: "What is the difference between slice and splice in JavaScript?",
     answeres: [
-      { text: "They are copied by reference", correct: false },
-      { text: "They are stored in the heap", correct: false },
-      { text: "They are immutable and copied by value", correct: true },
-      { text: "They are always passed by reference", correct: false },
-    ],
-  },
-  {
-    question:
-      "How do you make a copy of an object without referencing the original?",
+      { text: "slice() returns a shallow copy of a portion of an array without modifying the original array.", correct: true },
+      { text: "splice() modifies the original array by adding or removing elements.", correct: true },
+      { text: "slice() can only be used to add elements to an array.", correct: false },
+      { text: "splice() returns a new array without changing the original array.", correct: false }
+    ]
+  },{
+    question: "What is destructuring?",
     answeres: [
-      { text: "Using spread syntax {...obj}", correct: true },
-      { text: "By assigning it directly to another variable", correct: false },
-      { text: "Using the typeof operator", correct: false },
-      { text: "By wrapping it in an array", correct: false },
-    ],
-  },
-
-  {
-    question: "What does the Math.abs() method do in JavaScript?",
-    answers: [
-      { text: "Returns the square of x", correct: false },
-      { text: "Returns the absolute value of x", correct: true },
-      { text: "Returns the logarithm of x", correct: false },
-      { text: "Returns the cube of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.acos() method do in JavaScript?",
-    answers: [
-      { text: "Returns the arccosine of x, in radians", correct: true },
-      { text: "Returns the sine of x", correct: false },
-      { text: "Returns the cosine of x", correct: false },
-      { text: "Returns the square root of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.acosh() method do in JavaScript?",
-    answers: [
-      { text: "Returns the inverse cosine of x", correct: false },
-      { text: "Returns the hyperbolic arccosine of x", correct: true },
-      { text: "Returns the arc sine of x", correct: false },
-      { text: "Returns the hyperbolic sine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.asin() method do in JavaScript?",
-    answers: [
-      { text: "Returns the arcsine of x, in radians", correct: true },
-      { text: "Returns the square root of x", correct: false },
-      { text: "Returns the sine of x", correct: false },
-      { text: "Returns the cosine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.asinh() method do in JavaScript?",
-    answers: [
-      { text: "Returns the hyperbolic arcsine of x", correct: true },
-      { text: "Returns the inverse sine of x", correct: false },
-      { text: "Returns the inverse cosine of x", correct: false },
-      { text: "Returns the hyperbolic cosine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.atan() method do in JavaScript?",
-    answers: [
       {
-        text: "Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians",
-        correct: true,
+        text: "Destructuring is a JavaScript feature that allows unpacking values from arrays or properties from objects into distinct variables.",
+        correct: true
       },
-      { text: "Returns the tangent of x", correct: false },
-      { text: "Returns the arc sine of x", correct: false },
-      { text: "Returns the arc cosine of x", correct: false },
-    ],
-  },
-
-  {
-    question: "What does the Math.atan2() method do in JavaScript?",
-    answers: [
       {
-        text: "Returns the arctangent of the quotient of its arguments",
-        correct: true,
+        text: "Destructuring is a method used to encrypt data in JavaScript.",
+        correct: false
       },
-      { text: "Returns the arctangent of x", correct: false },
-      { text: "Returns the sine of x", correct: false },
-      { text: "Returns the cosine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.atanh() method do in JavaScript?",
-    answers: [
-      { text: "Returns the inverse hyperbolic tangent of x", correct: false },
-      { text: "Returns the hyperbolic arctangent of x", correct: true },
-      { text: "Returns the inverse sine of x", correct: false },
-      { text: "Returns the arc cosine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.cbrt() method do in JavaScript?",
-    answers: [
-      { text: "Returns the cubic root of x", correct: true },
-      { text: "Returns the square root of x", correct: false },
-      { text: "Returns the inverse of x", correct: false },
-      { text: "Returns the exponential of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.ceil() method do in JavaScript?",
-    answers: [
       {
-        text: "Returns x, rounded upwards to the nearest integer",
-        correct: true,
+        text: "Destructuring refers to deleting variables or functions from the scope.",
+        correct: false
       },
       {
-        text: "Returns x, rounded downwards to the nearest integer",
-        correct: false,
-      },
-      { text: "Returns the fractional part of x", correct: false },
-      { text: "Returns the absolute value of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.cos() method do in JavaScript?",
-    answers: [
-      { text: "Returns the cosine of x (x is in radians)", correct: true },
-      { text: "Returns the sine of x (x is in radians)", correct: false },
-      { text: "Returns the tangent of x (x is in radians)", correct: false },
-      { text: "Returns the inverse cosine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.cosh() method do in JavaScript?",
-    answers: [
-      { text: "Returns the hyperbolic cosine of x", correct: true },
-      { text: "Returns the square root of x", correct: false },
-      { text: "Returns the logarithm of x", correct: false },
-      { text: "Returns the inverse tangent of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.exp() method do in JavaScript?",
-    answers: [
-      { text: "Returns the value of Ex", correct: true },
-      { text: "Returns the natural logarithm of x", correct: false },
-      { text: "Returns the square root of x", correct: false },
-      { text: "Returns the inverse exponential of x", correct: false },
-    ],
+        text: "Destructuring is a way to combine multiple objects into one.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Math.floor() method do in JavaScript?",
-    answers: [
-      {
-        text: "Returns x, rounded downwards to the nearest integer",
-        correct: true,
-      },
+    question: "What is setTimeout in JavaScript?",
+    answeres: [
       {
-        text: "Returns x, rounded upwards to the nearest integer",
-        correct: false,
+        text: "setTimeout is a function that executes a piece of code after a specified delay (in milliseconds).",
+        correct: true
       },
-      { text: "Returns the fractional part of x", correct: false },
-      { text: "Returns the logarithm of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.log() method do in JavaScript?",
-    answers: [
-      { text: "Returns the natural logarithm (base E) of x", correct: true },
-      { text: "Returns the logarithm of x to base 10", correct: false },
-      { text: "Returns the logarithm of x to base 2", correct: false },
-      { text: "Returns the logarithm of x to base 5", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.max() method do in JavaScript?",
-    answers: [
-      { text: "Returns the number with the highest value", correct: true },
-      { text: "Returns the number with the lowest value", correct: false },
-      { text: "Returns the square root of x", correct: false },
-      { text: "Returns the sum of all arguments", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.min() method do in JavaScript?",
-    answers: [
-      { text: "Returns the number with the lowest value", correct: true },
-      { text: "Returns the number with the highest value", correct: false },
-      { text: "Returns the square root of x", correct: false },
-      { text: "Returns the sum of all arguments", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.pow() method do in JavaScript?",
-    answers: [
-      { text: "Returns the value of x to the power of y", correct: true },
-      { text: "Returns the square root of x", correct: false },
-      { text: "Returns the logarithm of x to the power of y", correct: false },
-      { text: "Returns the sum of x and y", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.random() method do in JavaScript?",
-    answers: [
-      { text: "Returns a random number between 0 and 1", correct: true },
-      { text: "Returns a random number between -1 and 1", correct: false },
-      { text: "Returns a random integer", correct: false },
-      { text: "Returns a random number between 1 and 100", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.round() method do in JavaScript?",
-    answers: [
-      { text: "Rounds x to the nearest integer", correct: true },
-      { text: "Rounds x to the nearest multiple of 10", correct: false },
-      { text: "Rounds x to the nearest multiple of 100", correct: false },
-      { text: "Rounds x to the nearest decimal", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.sign() method do in JavaScript?",
-    answers: [
       {
-        text: "Returns if x is negative, null, or positive (-1, 0, 1)",
-        correct: true,
+        text: "setTimeout is used to execute code repeatedly at fixed intervals.",
+        correct: false
       },
-      { text: "Returns the sign of x as a boolean", correct: false },
-      { text: "Returns the absolute value of x", correct: false },
-      { text: "Returns whether x is odd or even", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.sin() method do in JavaScript?",
-    answers: [
-      { text: "Returns the sine of x (x is in radians)", correct: true },
-      { text: "Returns the cosine of x (x is in radians)", correct: false },
-      { text: "Returns the tangent of x (x is in radians)", correct: false },
-      { text: "Returns the arc sine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.sinh() method do in JavaScript?",
-    answers: [
-      { text: "Returns the hyperbolic sine of x", correct: false },
-      { text: "Returns the square root of x", correct: true },
-      { text: "Returns the inverse cosine of x", correct: false },
-      { text: "Returns the sine of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.sqrt() method do in JavaScript?",
-    answers: [
-      { text: "Returns the square root of x", correct: true },
-      { text: "Returns the cubic root of x", correct: false },
-      { text: "Returns the inverse of x", correct: false },
-      { text: "Returns the logarithm of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.tan() method do in JavaScript?",
-    answers: [
-      { text: "Returns the tangent of an angle", correct: true },
-      { text: "Returns the sine of an angle", correct: false },
-      { text: "Returns the cosine of an angle", correct: false },
-      { text: "Returns the hyperbolic tangent of x", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.tanh() method do in JavaScript?",
-    answers: [
-      { text: "Returns the hyperbolic tangent of a number", correct: true },
-      { text: "Returns the square root of a number", correct: false },
-      { text: "Returns the tangent of a number", correct: false },
-      { text: "Returns the sine of a number", correct: false },
-    ],
-  },
-  {
-    question: "What does the Math.trunc() method do in JavaScript?",
-    answers: [
-      { text: "Returns the integer part of a number (x)", correct: true },
-      { text: "Returns the fractional part of a number", correct: false },
-      { text: "Rounds a number down", correct: false },
-      { text: "Rounds a number up", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getFullYear() method do in JavaScript?",
-    answers: [
-      { text: "Gets the year as a four digit number (yyyy)", correct: true },
-      { text: "Gets the year as a two digit number", correct: false },
-      { text: "Gets the month as a number", correct: false },
-      { text: "Gets the day as a number", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getMonth() method do in JavaScript?",
-    answers: [
-      { text: "Gets the month as a number (0-11)", correct: true },
-      { text: "Gets the month as a number (1-12)", correct: false },
-      { text: "Gets the year as a number", correct: false },
-      { text: "Gets the weekday as a number", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getDate() method do in JavaScript?",
-    answers: [
-      { text: "Gets the day as a number (1-31)", correct: true },
-      { text: "Gets the hour as a number", correct: false },
-      { text: "Gets the minute as a number", correct: false },
-      { text: "Gets the second as a number", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getHours() method do in JavaScript?",
-    answers: [
-      { text: "Gets the hour (0-23)", correct: true },
-      { text: "Gets the minute (0-59)", correct: false },
-      { text: "Gets the second (0-59)", correct: false },
-      { text: "Gets the year (yyyy)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getMinutes() method do in JavaScript?",
-    answers: [
-      { text: "Gets the minute (0-59)", correct: true },
-      { text: "Gets the second (0-59)", correct: false },
-      { text: "Gets the millisecond (0-999)", correct: false },
-      { text: "Gets the hour (0-23)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getTime() method do in JavaScript?",
-    answers: [
       {
-        text: "Gets the time (milliseconds since January 1, 1970)",
-        correct: true,
+        text: "setTimeout immediately blocks the execution of further code until the timeout finishes.",
+        correct: false
       },
-      { text: "Gets the current date", correct: false },
-      { text: "Gets the weekday", correct: false },
-      { text: "Gets the year", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getDay() method do in JavaScript?",
-    answers: [
-      { text: "Gets the weekday as a number (0-6)", correct: true },
-      { text: "Gets the day of the month (1-31)", correct: false },
-      { text: "Gets the year (yyyy)", correct: false },
-      { text: "Gets the hour (0-23)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.now() method do in JavaScript?",
-    answers: [
       {
-        text: "Gets the time (milliseconds since January 1, 1970)",
-        correct: true,
-      },
-      { text: "Gets the current date", correct: false },
-      { text: "Gets the year (yyyy)", correct: false },
-      { text: "Gets the minute (0-59)", correct: false },
-    ],
+        text: "setTimeout is used to cancel ongoing asynchronous operations.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Date.getSeconds() method do in JavaScript?",
+    question: "What is setInterval in JavaScript?",
     answers: [
-      { text: "Gets the second (0-59)", correct: true },
-      { text: "Gets the millisecond (0-999)", correct: false },
-      { text: "Gets the minute (0-59)", correct: false },
-      { text: "Gets the hour (0-23)", correct: false },
-    ],
+      { text: "setInterval repeatedly executes a function at specified intervals.", correct: true },
+      { text: "setInterval executes a function only once after a delay.", correct: false },
+      { text: "setInterval is used to stop a running interval.", correct: false },
+      { text: "setInterval is a blocking, synchronous method.", correct: false }
+    ]
   },
   {
-    question: "What does the Date.getMilliseconds() method do in JavaScript?",
+    question: "What are Promises in JavaScript?",
     answers: [
-      { text: "Gets the millisecond (0-999)", correct: true },
-      { text: "Gets the second (0-59)", correct: false },
-      { text: "Gets the minute (0-59)", correct: false },
-      { text: "Gets the hour (0-23)", correct: false },
-    ],
+      { text: "Promises represent the eventual completion or failure of an asynchronous operation.", correct: true },
+      { text: "Promises are used only for synchronous code execution.", correct: false },
+      { text: "A promise can be in only one state at a time: fulfilled.", correct: false },
+      { text: "Promises block the main thread while executing.", correct: false }
+    ]
   },
   {
-    question: "What does the Date.getUTCDate() method do in JavaScript?",
+    question: "What is a closure in JavaScript?",
     answers: [
-      { text: "Same as getDate(), but returns the UTC date", correct: true },
-      { text: "Same as getMonth(), but returns the UTC month", correct: false },
-      { text: "Same as getHours(), but returns the UTC hour", correct: false },
-      { text: "Same as getTime(), but returns the UTC time", correct: false },
-    ],
+      { text: "A closure is a function that has access to its own scope, the outer function's scope, and the global scope.", correct: true },
+      { text: "A closure is a function that can only access global variables.", correct: false },
+      { text: "Closures are used only in loops to improve performance.", correct: false },
+      { text: "Closures cannot remember variables once the outer function has executed.", correct: false }
+    ]
   },
   {
-    question: "What does the Date.getUTCDay() method do in JavaScript?",
-    answers: [
-      { text: "Same as getDay(), but returns the UTC day", correct: true },
-      { text: "Same as getDate(), but returns the UTC date", correct: false },
-      { text: "Same as getMonth(), but returns the UTC month", correct: false },
+    question: "What are callbacks in JavaScript?",
+    answeres: [
       {
-        text: "Same as getFullYear(), but returns the UTC year",
-        correct: false,
+        text: "Callbacks are functions passed as arguments to other functions and executed after the completion of that function's operation.",
+        correct: true
       },
-    ],
-  },
-  {
-    question: "What does the Date.getUTCFullYear() method do in JavaScript?",
-    answers: [
       {
-        text: "Same as getFullYear(), but returns the UTC year",
-        correct: true,
+        text: "Callbacks provide a way to handle asynchronous operations in JavaScript, allowing code to continue executing while waiting for operations to complete.",
+        correct: true
       },
-      { text: "Same as getMonth(), but returns the UTC month", correct: false },
-      { text: "Same as getDate(), but returns the UTC date", correct: false },
-      { text: "Same as getHours(), but returns the UTC hour", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.getUTCMonth() method do in JavaScript?",
-    answers: [
-      { text: "Same as getMonth(), but returns the UTC month", correct: true },
       {
-        text: "Same as getFullYear(), but returns the UTC year",
-        correct: false,
+        text: "Callbacks are special objects that can only be used with setTimeout() and setInterval() functions.",
+        correct: false
       },
-      { text: "Same as getDay(), but returns the UTC day", correct: false },
-      { text: "Same as getDate(), but returns the UTC date", correct: false },
-    ],
+      {
+        text: "Callbacks are a synchronous programming technique that blocks code execution until the operation completes.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Date.getUTCHours() method do in JavaScript?",
-    answers: [
-      { text: "Same as getHours(), but returns the UTC hour", correct: true },
+    question: "What are Higher Order Functions in JavaScript?",
+    answeres: [
       {
-        text: "Same as getMinutes(), but returns the UTC minutes",
-        correct: false,
+        text: "Functions that take one or more functions as arguments or return a function as their result.",
+        correct: true
       },
       {
-        text: "Same as getSeconds(), but returns the UTC seconds",
-        correct: false,
+        text: "Functions like map(), filter(), and reduce() that operate on arrays and take callback functions.",
+        correct: true
       },
       {
-        text: "Same as getMilliseconds(), but returns the UTC milliseconds",
-        correct: false,
+        text: "Functions that can only be defined inside classes or objects.",
+        correct: false
       },
-    ],
-  },
-  {
-    question: "What does the Date.setDate() method do in JavaScript?",
-    answers: [
-      { text: "Sets the day as a number (1-31)", correct: true },
-      { text: "Sets the hour as a number (0-23)", correct: false },
-      { text: "Sets the second as a number (0-59)", correct: false },
-      { text: "Sets the year as a number", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.setFullYear() method do in JavaScript?",
-    answers: [
-      { text: "Sets the year (optionally month and day)", correct: true },
-      { text: "Sets the month (0-11)", correct: false },
-      { text: "Sets the minute (0-59)", correct: false },
-      { text: "Sets the day (1-31)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.setMonth() method do in JavaScript?",
-    answers: [
-      { text: "Sets the month (0-11)", correct: true },
-      { text: "Sets the day (1-31)", correct: false },
-      { text: "Sets the hour (0-23)", correct: false },
-      { text: "Sets the second (0-59)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.setHours() method do in JavaScript?",
-    answers: [
-      { text: "Sets the hour (0-23)", correct: true },
-      { text: "Sets the minute (0-59)", correct: false },
-      { text: "Sets the second (0-59)", correct: false },
-      { text: "Sets the millisecond (0-999)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.setMinutes() method do in JavaScript?",
-    answers: [
-      { text: "Sets the minutes (0-59)", correct: true },
-      { text: "Sets the hours (0-23)", correct: false },
-      { text: "Sets the seconds (0-59)", correct: false },
-      { text: "Sets the milliseconds (0-999)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.setSeconds() method do in JavaScript?",
-    answers: [
-      { text: "Sets the seconds (0-59)", correct: true },
-      { text: "Sets the minutes (0-59)", correct: false },
-      { text: "Sets the hours (0-23)", correct: false },
-      { text: "Sets the milliseconds (0-999)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.setMilliseconds() method do in JavaScript?",
-    answers: [
-      { text: "Sets the milliseconds (0-999)", correct: true },
-      { text: "Sets the seconds (0-59)", correct: false },
-      { text: "Sets the minutes (0-59)", correct: false },
-      { text: "Sets the hours (0-23)", correct: false },
-    ],
-  },
-  {
-    question: "What does the Date.setTime() method do in JavaScript?",
-    answers: [
       {
-        text: "Sets the time (milliseconds since January 1, 1970)",
-        correct: true,
-      },
-      { text: "Sets the year (yyyy)", correct: false },
-      { text: "Sets the month (0-11)", correct: false },
-      { text: "Sets the day (1-31)", correct: false },
-    ],
+        text: "Functions that run with higher execution priority in the JavaScript engine.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Date.new Date() constructor do in JavaScript?",
-    answers: [
+    question: "What is the difference between == and === in JavaScript?",
+    answeres: [
       {
-        text: "Creates a new date object with the current date and time",
-        correct: true,
+        text: "== performs type coercion before comparison, while === compares both value and type without coercion.",
+        correct: true
       },
       {
-        text: "Creates a new date object with a specified date",
-        correct: false,
+        text: "=== is a strict equality operator that returns true only if both operands have the same type and value.",
+        correct: true
       },
-      { text: "Creates a new date object from a date string", correct: false },
       {
-        text: "Creates a new date object as zero time plus milliseconds",
-        correct: false,
+        text: "== and === are interchangeable and produce the same results in all scenarios.",
+        correct: false
       },
-    ],
-  },
-
-  {
-    question: "What does the Window.alert() method do in JavaScript?",
-    answers: [
       {
-        text: "Displays an alert box with a message & an OK button",
-        correct: true,
-      },
-      { text: "Opens a new browser window", correct: false },
-      { text: "Moves the window to the specified position", correct: false },
-      { text: "Displays a dialog box for input", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.atob() method do in JavaScript?",
-    answers: [
-      { text: "Decodes a base-64 encoded string", correct: true },
-      { text: "Encodes a string in base-64", correct: false },
-      { text: "Removes focus from the current window", correct: false },
-      { text: "Displays an alert box with a message", correct: false },
-    ],
+        text: "=== can only be used for comparing primitive values, not objects or arrays.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Window.blur() method do in JavaScript?",
-    answers: [
-      { text: "Removes focus from the current window", correct: true },
-      { text: "Opens a new browser window", correct: false },
-      { text: "Moves the window to the specified position", correct: false },
+    question: "What is Hoisting?",
+    answeres: [
       {
-        text: "Scrolls the document to the specified coordinates",
-        correct: false,
+        text: "JavaScript's default behavior of moving declarations to the top of their scope before code execution.",
+        correct: true
       },
-    ],
-  },
-  {
-    question: "What does the Window.btoa() method do in JavaScript?",
-    answers: [
-      { text: "Encodes a string in base-64", correct: true },
-      { text: "Decodes a base-64 encoded string", correct: false },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Clears a timer set with setInterval()", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.clearInterval() method do in JavaScript?",
-    answers: [
-      { text: "Clears a timer set with setInterval()", correct: true },
-      { text: "Sets a timer to run at specified intervals", correct: false },
-      { text: "Closes the current window", correct: false },
-      { text: "Resizes the window by the specified pixels", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.clearTimeout() method do in JavaScript?",
-    answers: [
-      { text: "Clears a timer set with setTimeout()", correct: true },
       {
-        text: "Sets a timer to run after a specified number of milliseconds",
-        correct: false,
+        text: "Variable and function declarations are hoisted, but initializations are not.",
+        correct: true
       },
       {
-        text: "Moves a window relative to its current position",
-        correct: false,
+        text: "Hoisting affects all variable declarations equally, regardless of whether they use var, let, or const.",
+        correct: false
       },
-      { text: "Prints the content of the current window", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.close() method do in JavaScript?",
-    answers: [
-      { text: "Closes the current window", correct: true },
-      { text: "Opens a new browser window", correct: false },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Moves a window to the specified position", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.confirm() method do in JavaScript?",
-    answers: [
       {
-        text: "Displays a dialog box with a message and an OK and a Cancel button",
-        correct: true,
-      },
-      { text: "Displays an alert box with a message", correct: false },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Moves the window to the specified position", correct: false },
-    ],
+        text: "Hoisting physically moves code to the top of the file during runtime execution.",
+        correct: false
+      }
+    ]
   },
   {
-    question:
-      "What does the Window.getComputedStyle() method do in JavaScript?",
-    answers: [
+    question: "What are the differences between let, var and const?",
+    answeres: [
       {
-        text: "Gets the current computed CSS styles applied to an element",
-        correct: true,
+        text: "var is function-scoped, while let and const are block-scoped.",
+        correct: true
       },
       {
-        text: "Returns a reference to the current window's document",
-        correct: false,
+        text: "const creates variables whose reference cannot be reassigned after initialization, while let and var allow reassignment.",
+        correct: true
       },
       {
-        text: "Moves a window relative to its current position",
-        correct: false,
+        text: "let and const declarations are not hoisted, while var declarations are hoisted to the top of their scope.",
+        correct: false
       },
       {
-        text: "Resizes the window to the specified width and height",
-        correct: false,
-      },
-    ],
+        text: "const variables prevent modification of array elements or object properties.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Window.getSelection() method do in JavaScript?",
-    answers: [
-      {
-        text: "Returns a Selection object representing the range of text selected by the user",
-        correct: true,
-      },
+    question: "What are limitations of arrow functions?",
+    answeres: [
       {
-        text: "Gets the current computed CSS styles applied to an element",
-        correct: false,
+        text: "Arrow functions don't have their own 'this' context; they inherit it from the surrounding scope.",
+        correct: true
       },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Closes the current window", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.matchMedia() method do in JavaScript?",
-    answers: [
       {
-        text: "Returns a MediaQueryList object representing the specified CSS media query string",
-        correct: true,
+        text: "Arrow functions cannot be used as constructors or with the 'new' keyword.",
+        correct: true
       },
-      { text: "Resizes the window by the specified pixels", correct: false },
-      { text: "Moves a window to the specified position", correct: false },
-      { text: "Sets focus to the current window", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.focus() method do in JavaScript?",
-    answers: [
-      { text: "Sets focus to the current window", correct: true },
       {
-        text: "Moves the window relative to its current position",
-        correct: false,
+        text: "Arrow functions can always replace regular functions without changing behavior.",
+        correct: false
       },
-      { text: "Opens a new browser window", correct: false },
       {
-        text: "Resizes the window to the specified width and height",
-        correct: false,
-      },
-    ],
+        text: "Arrow functions have better performance than regular functions in all scenarios.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Window.moveBy() method do in JavaScript?",
-    answers: [
-      {
-        text: "Moves a window relative to its current position",
-        correct: true,
-      },
-      { text: "Sets focus to the current window", correct: false },
+    question: "What is the difference between Shallow copy and deep copy?",
+    answeres: [
       {
-        text: "Scrolls the document to the specified coordinates",
-        correct: false,
+        text: "A shallow copy duplicates only the top-level properties, with nested objects still referencing the original objects.",
+        correct: true
       },
-      { text: "Closes the current window", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.moveTo() method do in JavaScript?",
-    answers: [
-      { text: "Moves a window to the specified position", correct: true },
-      { text: "Opens a new browser window", correct: false },
       {
-        text: "Moves a window relative to its current position",
-        correct: false,
+        text: "A deep copy duplicates every object referenced in the original, creating completely independent copies.",
+        correct: true
       },
-      { text: "Resizes the window by the specified pixels", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.open() method do in JavaScript?",
-    answers: [
-      { text: "Opens a new browser window", correct: true },
-      { text: "Moves the window to the specified position", correct: false },
-      { text: "Resizes the window by the specified pixels", correct: false },
-      { text: "Sets focus to the current window", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.print() method do in JavaScript?",
-    answers: [
-      { text: "Prints the content of the current window", correct: true },
-      { text: "Opens a new browser window", correct: false },
-      { text: "Moves a window to the specified position", correct: false },
-      { text: "Resizes the window by the specified pixels", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.prompt() method do in JavaScript?",
-    answers: [
       {
-        text: "Displays a dialog box that prompts the visitor for input",
-        correct: true,
+        text: "Object.assign() and spread operator always create deep copies of objects.",
+        correct: false
       },
       {
-        text: "Displays a dialog box with a message and an OK and a Cancel button",
-        correct: false,
-      },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Closes the current window", correct: false },
-    ],
+        text: "There is no performance difference between shallow and deep copy operations.",
+        correct: false
+      }
+    ]
   },
   {
-    question:
-      "What does the Window.requestAnimationFrame() method do in JavaScript?",
-    answers: [
-      {
-        text: "Requests the browser to call a function to update an animation before the next repaint",
-        correct: true,
-      },
+    question: "What is event bubbling?",
+    answeres: [
       {
-        text: "Sets a timer to run after a specified number of milliseconds",
-        correct: false,
+        text: "Event bubbling is a propagation mechanism where an event triggered on a nested element bubbles up through its ancestors in the DOM tree.",
+        correct: true
       },
-      { text: "Resizes the window by the specified pixels", correct: false },
-      { text: "Moves the window to the specified position", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.resizeBy() method do in JavaScript?",
-    answers: [
-      { text: "Resizes the window by the specified pixels", correct: true },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Opens a new browser window", correct: false },
-      { text: "Closes the current window", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.resizeTo() method do in JavaScript?",
-    answers: [
       {
-        text: "Resizes the window to the specified width and height",
-        correct: true,
+        text: "Events first trigger on the target element and then propagate upward to parent elements.",
+        correct: true
       },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Opens a new browser window", correct: false },
-      { text: "Moves the window to the specified position", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.scrollBy() method do in JavaScript?",
-    answers: [
-      { text: "Scrolls the document by the number of pixels", correct: true },
       {
-        text: "Scrolls the document to the specified coordinates",
-        correct: false,
+        text: "Event bubbling is the default behavior for all JavaScript events and cannot be prevented.",
+        correct: false
       },
-      { text: "Moves the window to the specified position", correct: false },
-      { text: "Resizes the window by the specified pixels", correct: false },
-    ],
-  },
-  {
-    question: "What does the Window.scrollTo() method do in JavaScript?",
-    answers: [
       {
-        text: "Scrolls the document to the specified coordinates",
-        correct: true,
-      },
-      { text: "Moves the window to the specified position", correct: false },
-      { text: "Sets focus to the current window", correct: false },
-      { text: "Closes the current window", correct: false },
-    ],
+        text: "Event bubbling only occurs when using inline event handlers in HTML.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the Window.stop() method do in JavaScript?",
-    answers: [
-      { text: "Stops the window from loading", correct: true },
-      { text: "Opens a new browser window", correct: false },
+    question: "What is event capturing?",
+    answeres: [
       {
-        text: "Scrolls the document to the specified coordinates",
-        correct: false,
+        text: "Event capturing is a propagation mechanism where events are first captured by the outermost element and then propagate inward to the target element.",
+        correct: true
       },
-      { text: "Sets focus to the current window", correct: false },
-    ],
-  },
-  {
-    question: "What does the onblur event do in JavaScript?",
-    answers: [
-      { text: "When a user leaves an input field", correct: true },
       {
-        text: "When a user changes the content of an input field",
-        correct: false,
+        text: "Event capturing occurs before event bubbling in the event propagation cycle.",
+        correct: true
       },
-      { text: "When an input field gets focus", correct: false },
-      { text: "When input text is selected", correct: false },
-    ],
-  },
-  {
-    question: "What does the onchange event do in JavaScript?",
-    answers: [
       {
-        text: "When a user changes the content of an input field",
-        correct: true,
+        text: "Event capturing is enabled by default in all modern browsers.",
+        correct: false
       },
-      { text: "When a user leaves an input field", correct: false },
-      { text: "When an input field gets focus", correct: false },
-      { text: "When input text is selected", correct: false },
-    ],
-  },
-  {
-    question: "What does the onfocus event do in JavaScript?",
-    answers: [
-      { text: "When an input field gets focus", correct: true },
-      { text: "When a user leaves an input field", correct: false },
-      { text: "When input text is selected", correct: false },
       {
-        text: "When a user changes the content of an input field",
-        correct: false,
-      },
-    ],
+        text: "Event.stopPropagation() can stop bubbling but has no effect on the capturing phase.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the onselect event do in JavaScript?",
-    answers: [
-      { text: "When input text is selected", correct: true },
-      { text: "When an input field gets focus", correct: false },
-      { text: "When a user leaves an input field", correct: false },
+    question: "What is 'this' in JavaScript and how does it behave in various scenarios?",
+    answeres: [
       {
-        text: "When a user changes the content of an input field",
-        correct: false,
+        text: "In a regular function, 'this' refers to the object that called the function or the global object if called without context.",
+        correct: true
       },
-    ],
-  },
-  {
-    question: "What does the onsubmit event do in JavaScript?",
-    answers: [
-      { text: "When a user clicks the submit button", correct: true },
-      { text: "When a user leaves an input field", correct: false },
-      { text: "When input text is selected", correct: false },
-      { text: "When an input field gets focus", correct: false },
-    ],
-  },
-  {
-    question: "What does the onreset event do in JavaScript?",
-    answers: [
-      { text: "When a user clicks the reset button", correct: true },
-      { text: "When a user clicks the submit button", correct: false },
-      { text: "When an input field gets focus", correct: false },
-      { text: "When input text is selected", correct: false },
-    ],
-  },
-  {
-    question: "What does the onclick event do in JavaScript?",
-    answers: [
-      { text: "When the user clicks on an element", correct: true },
       {
-        text: "When the user right-clicks on an element to open a context menu",
-        correct: false,
+        text: "In arrow functions, 'this' is lexically bound and inherits its value from the surrounding scope.",
+        correct: true
       },
-      { text: "When the pointer is moved onto an element", correct: false },
-      { text: "When the pointer is moved out of an element", correct: false },
-    ],
-  },
-  {
-    question: "What does the ondblclick event do in JavaScript?",
-    answers: [
-      { text: "When the user double-clicks on an element", correct: true },
-      { text: "When the user clicks on an element", correct: false },
-      { text: "When the user right-clicks on an element", correct: false },
-      { text: "When the pointer is moved out of an element", correct: false },
-    ],
-  },
-  {
-    question: "What does the onmouseenter event do in JavaScript?",
-    answers: [
-      { text: "When the pointer is moved onto an element", correct: true },
-      { text: "When the pointer is moved out of an element", correct: false },
-      { text: "When the user clicks on an element", correct: false },
       {
-        text: "When the pointer is moving while it is over an element",
-        correct: false,
+        text: "'this' always refers to the same value throughout the entire JavaScript application.",
+        correct: false
       },
-    ],
-  },
-  {
-    question: "What does the onmouseleave event do in JavaScript?",
-    answers: [
-      { text: "When the pointer is moved out of an element", correct: true },
-      { text: "When the pointer is moved onto an element", correct: false },
-      { text: "When the user clicks on an element", correct: false },
       {
-        text: "When the pointer is moving while it is over an element",
-        correct: false,
-      },
-    ],
+        text: "The value of 'this' cannot be explicitly set or modified once a function is defined.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the onmousedown event do in JavaScript?",
-    answers: [
+    question: "How do you optimize the performance of a JavaScript application?",
+    answeres: [
       {
-        text: "When the user presses a mouse button over an element",
-        correct: true,
+        text: "Minimize DOM manipulations by batching updates and using document fragments.",
+        correct: true
       },
       {
-        text: "When the user releases a mouse button over an element",
-        correct: false,
+        text: "Use efficient data structures, memoization, and optimize loops to reduce computational complexity.",
+        correct: true
       },
-      { text: "When the pointer is moved onto an element", correct: false },
-      { text: "When the pointer is moved out of an element", correct: false },
-    ],
-  },
-  {
-    question: "What does the onmouseup event do in JavaScript?",
-    answers: [
       {
-        text: "When a user releases a mouse button over an element",
-        correct: true,
+        text: "Always use arrow functions instead of regular functions for better performance.",
+        correct: false
       },
       {
-        text: "When the user presses a mouse button over an element",
-        correct: false,
-      },
-      { text: "When the pointer is moved onto an element", correct: false },
-      { text: "When the pointer is moved out of an element", correct: false },
-    ],
+        text: "Optimization is only necessary for server-side JavaScript applications, not browser applications.",
+        correct: false
+      }
+    ]
   },
   {
-    question: "What does the onmouseover event do in JavaScript?",
-    answers: [
-      {
-        text: "When the pointer is moved onto an element or onto one of its children",
-        correct: true,
-      },
-      { text: "When the pointer is moved out of an element", correct: false },
-      {
-        text: "When the user presses a mouse button over an element",
-        correct: false,
-      },
+    question: "What is meant by debouncing and throttling?",
+    answeres: [
       {
-        text: "When the user releases a mouse button over an element",
-        correct: false,
+        text: "Debouncing delays the execution of a function until after a specified time has elapsed since the last time it was invoked.",
+        correct: true
       },
-    ],
-  },
-  {
-    question: "What does the onmouseout event do in JavaScript?",
-    answers: [
       {
-        text: "When a user moves the mouse pointer out of an element or out of one of its children",
-        correct: true,
+        text: "Throttling limits how often a function can be called in a given time period, ensuring it executes at a regular interval.",
+        correct: true
       },
       {
-        text: "When the pointer is moved onto an element or one of its children",
-        correct: false,
+        text: "Debouncing and throttling are identical techniques with different names.",
+        correct: false
       },
-      { text: "When the user clicks on an element", correct: false },
       {
-        text: "When the user presses a mouse button over an element",
-        correct: false,
-      },
-    ],
-  },
+        text: "These techniques are only useful for server-side code and have no application in browser environments.",
+        correct: false
+      }
+    ]
+  }
 ];
-
 
 const questionelement = document.getElementById("question");
 const ansbtns = document.getElementById("ans");
@@ -1783,8 +557,6 @@ function showquestion() {
   });
 }
 
-
-
 function resetstate() {
   nextbtn.style.display = "none";
   while (ansbtns.firstChild) ansbtns.removeChild(ansbtns.firstChild);
@@ -1809,11 +581,56 @@ function selectAnswere(e) {
   nextbtn.style.display = "block";
 }
 
+// Enhanced showScore function with congratulation message
 function showScore() {
   resetstate();
-  questionelement.innerHTML = `You scored ${score} out of ${question.length}`;
+  
+  // Create a congratulation message based on score
+  let congratsMessage = "";
+  const percentage = (score / question.length) * 100;
+  
+  if (percentage >= 80) {
+    congratsMessage = "Excellent job! Congratulations on your great score!";
+  } else if (percentage >= 60) {
+    congratsMessage = "Good work! Congratulations!";
+  } else if (percentage >= 40) {
+    congratsMessage = "Nice effort! Keep practicing!";
+  } else {
+    congratsMessage = "Thank you for taking the quiz. Try again!";
+  }
+  
+  // Display score and congratulation message
+  questionelement.innerHTML = `
+    <div class="score-display">
+      <h2>Quiz Completed!</h2>
+      <p>You scored ${score} out of ${question.length}</p>
+      <p class="congrats">${congratsMessage}</p>
+    </div>
+  `;
+  
   nextbtn.innerHTML = "Play Again";
   nextbtn.style.display = "block";
+  
+  // Add simple styles for the score display
+  const scoreStyles = `
+    .score-display {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .congrats {
+      color: #4CAF50;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  `;
+  
+  // Add the styles to the document
+  const styleElement = document.createElement('style');
+  styleElement.textContent = scoreStyles;
+  document.head.appendChild(styleElement);
 }
 
 function handleNextButton() {
